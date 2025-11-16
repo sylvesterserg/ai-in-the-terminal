@@ -113,6 +113,28 @@ gemini
 - [Codex Documentation](https://platform.openai.com/docs/tools/codex)
 - [opencode Repository](https://github.com/stackblitz-labs/opencode)
 
+## 📁 Repository Structure
+
+```
+.
+├── README.md          # You're here!
+└── docs/              # Step-by-step guides that mirror the video chapters
+```
+
+Keeping everything inside `docs/` ensures each workflow has a dedicated, linkable Markdown file. Feel free to add new guides in that folder following the existing numbering scheme so they slot naturally into the table of contents above.
+
+## 🧹 Repo Maintenance Checklist
+
+Use this checklist whenever you open a PR or sync your fork so the repo stays fast and easy to navigate:
+
+1. **Remove large or binary files** – store screen recordings, PSDs, or archives in cloud storage instead of committing them. If you accidentally add one, rewrite the history before merging.
+2. **Purge build artifacts** – delete `dist/`, `build/`, or other generated folders before committing. They are ignored automatically via `.gitignore` (see below).
+3. **Keep `.gitignore` updated** – it now covers OS cruft, editor settings, Python environments, Node modules, and archives. Add tool-specific entries as new workflows appear.
+4. **Archive unused branches** – regularly prune merged branches locally (`git branch -d <name>`) and remotely (`git push origin --delete <name>`) so contributors only see active work.
+5. **Document structural changes** – whenever you add or reorganize files, update this README so contributors always know where new content lives.
+
+> 💡 Tip: running `git clean -xdf` (after double-checking!) is an easy way to remove ignored files if your working tree feels messy.
+
 ## 🛡️ Security Note (from the video)
 
 **TwinGate Sponsor Message:** If you're giving AI access to your computer, make sure your remote access is secured properly. Traditional VPNs give full network access - consider zero-trust solutions like TwinGate for granular control.
